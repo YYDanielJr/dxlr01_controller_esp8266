@@ -32,7 +32,7 @@ void loop() {
 	if(loraModule.isAvailable) {
 		// printf("Hello Two.\n");
 		char snd[200] = {0};
-		sprintf(snd, "Count: %d, Hum: %f, Temp: %f", getCount(), h, t);
+		sprintf(snd, "H%.1fT%.1f", h, t);
 		manager.send(snd);
 	}
 	delay(2000);
